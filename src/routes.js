@@ -21,6 +21,21 @@ const router = new Router({
             name: "User",
             component: () => import("./components/User"),
         },
+        {
+            path: "/CijeliPopis",
+            name: "CijeliPopis",
+            component: () => import("./components/CijeliPopis"),
+        },
+        {
+            path: "/Popis/:id",
+            name: "Popis",
+            component: () => import("./components/Popis"),
+        },
+        {
+            path: "/rejting/:id",
+            name: "Rejting",
+            component: () => import("./components/Rejting"),
+        },
     ]
 });
 

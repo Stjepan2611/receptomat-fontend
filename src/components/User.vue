@@ -24,6 +24,10 @@
           <label>KUHAR/ICA</label>
           <input type="text" class="form-control" v-model="kuhar" />
         </fieldset>
+        <fieldset class="form-group">
+          <label>SASTOJCI</label>
+          <input type="text" class="form-control" v-model="sastojci" />
+        </fieldset>
         <button class="btn btn-success" type="submit">Spremi</button>
       </form>
     </div>
@@ -38,6 +42,7 @@ export default {
       naslov: "",
       vrsta: "",
       kuhar: "",
+      sastojci: "",
       errors: [],
     };
   },
@@ -52,6 +57,7 @@ export default {
         this.naslov = res.data.naslov;
         this.vrsta = res.data.vrsta;
         this.kuhar = res.data.kuhar;
+        this.sastojci = res.data.sastojci;
       });
     },
     validateAndSubmit(e) {
@@ -73,6 +79,7 @@ export default {
             naslov: this.naslov,
             vrsta: this.vrsta,
             kuhar: this.kuhar,
+            sastojci: this.sastojci,
           }).then(() => {
             this.$router.push("/users");
           });
@@ -82,6 +89,7 @@ export default {
             naslov: this.naslov,
             vrsta: this.vrsta,
             kuhar: this.kuhar,
+            sastojci: this.sastojci,
           }).then(() => {
             this.$router.push("/users");
           });
@@ -94,3 +102,4 @@ export default {
   },
 };
 </script>
+
